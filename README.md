@@ -12,15 +12,12 @@ DESCRIPTION: This query selects customers whose last names that ends with b from
 */
 
 SELECT
-FirstName AS [First Name],
-LastName AS [Last Name],
-Email AS [EMAIL]
-FROM
-customers
-WHERE 
-LastName LIKE 'b%'
-ORDER BY
-FirstName DESC;
+  FirstName AS [First Name],
+  LastName AS [Last Name],
+  Email AS [EMAIL]
+FROM customers
+WHERE LastName LIKE 'b%'
+ORDER BY FirstName DESC;
 
 -- **Q2 When sorted in descending order, which company appears at the top in the customers table?**
 /*
@@ -30,16 +27,13 @@ DESCRIPTION: When sorted in descending order, which company appears at the top i
 */
 
 SELECT
-FirstName AS [First Name],
-LastName AS [Last Name],
-Email AS [EMAIL],
+  FirstName AS [First Name],
+  LastName AS [Last Name],
+  Email AS [EMAIL],
 Company 
-FROM
-customers
-WHERE 
-company IS NOT NULL
-ORDER BY
-Company DESC;
+FROM customers
+WHERE company IS NOT NULL
+ORDER BY Company DESC;
 
 -- **Q3. How many customers do not have a postal code listed?**
 /*
@@ -49,15 +43,12 @@ DESCRIPTION: How many customers do not have a postal code listed?
 */
 
 SELECT
-FirstName AS [First Name],
-LastName AS [Last Name],
-Email AS [EMAIL]
-FROM
-customers
-WHERE 
-PostalCode IS NULL
-ORDER BY
-FirstName DESC;
+  FirstName AS [First Name],
+  LastName AS [Last Name],
+  Email AS [EMAIL]
+FROM customers
+WHERE PostalCode IS NULL
+ORDER BY FirstName DESC;
 
 
 
